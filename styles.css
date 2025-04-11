@@ -1,7 +1,7 @@
 body {
-    background: linear-gradient(0deg, #DFF6FF, #2e91b9);
-    height: 100vh;
-
+    background-color: #DFF6FF;
+    min-height: 100vh;
+    background-attachment: fixed;
 }
 
 * {
@@ -56,7 +56,7 @@ nav .wrapper {
 }
 
 .nav-links li a:hover {
-    background: #1881c2;
+    background: #1363DF;
 }
 
 nav input {
@@ -64,7 +64,7 @@ nav input {
 }
 
 .BtnBuscarCaja {
-    position: absolute;
+    position: fixed;
     top: 18px;
     right: 200px;
     z-index: 9999;
@@ -118,12 +118,13 @@ nav input {
     transform: scale(0.95);
 }
 
-.profile-user{
-    position: absolute;
+.profile-user {
+    position: fixed;
     top: 20px;
     right: 40px;
     z-index: 9999;
 }
+
 .logouser {
     background-color: #ffffff;
     border: none;
@@ -138,8 +139,95 @@ nav input {
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.profile-user svg{
+.profile-user svg {
     width: 30px;
     height: 30px;
 
+}
+
+.contenedor-productos {
+    position: relative;
+    top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding: 20px;
+}
+
+.producto {
+    width: 300px;
+    background: #06283D;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.producto h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: white;
+}
+
+.boton-ver {
+    position: relative; 
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background: #1363DF;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.animacionMartillo {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.animacionMartillo img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes martillo-movimiento {
+    0% {
+        transform: rotate(50deg) translateY(-80px) translateX(-30px); /* Empieza normal */
+    }
+    25% {
+        transform: rotate(100deg) translateY(-80px) translateX(-30px); /* Se va hacia atrás */
+    }
+    50% {
+        transform: rotate(-20deg) translateY(-50px) translateX(-30px); /* Golpe - martillo se mueve hacia adelante */
+    }
+    75% {
+        transform: rotate(50deg) translateY(-80px) translateX(-30px); /* Retorna ligeramente hacia atrás */
+    }
+    100% {
+        transform: rotate(50deg) translateY(-80px) translateX(-30px); /* Vuelve a la posición normal */
+    }  
+}
+
+.boton-ver:hover .animacionMartillo {
+    opacity: 1;
+    animation: martillo-movimiento 2.0s ease-in-out infinite;
+}
+
+.boton-ver:hover {
+    background: #47B5FF;
 }
