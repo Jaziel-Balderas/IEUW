@@ -1,4 +1,4 @@
-body{
+body {
     background: linear-gradient(0deg, #DFF6FF, #2e91b9);
     height: 100vh;
 
@@ -48,9 +48,9 @@ nav .wrapper {
 .nav-links li a {
     color: #f2f2f2;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
-    padding: 9px 15px;
+    padding: 9px 12px;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
@@ -321,4 +321,85 @@ nav input {
 .body-text div {
     font-size: 45px;
     font-weight: 600;
+}
+
+.BtnBuscarCaja {
+    position: absolute;
+    top: 18px;
+    right: 200px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 4px 8px;
+    height: 55px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btnbusqueda {
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 12px 10px;
+    font-size: 14px;
+    border-radius: 20px;
+    width: 250px;
+    background-color: white;
+    color: black;
+}
+
+.imgboton {
+    background-color: #06283D;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.imgboton svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+    transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.imgboton:hover {
+    background-color: #47B5FF;
+}
+
+.imgboton:active {
+    background-color: #1363DF;
+    transform: scale(0.95);
+}
+
+.profile-user{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    z-index: 9999;
+}
+.logouser {
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.profile-user svg{
+    width: 30px;
+    height: 30px;
+
 }
