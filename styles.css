@@ -294,3 +294,52 @@ nav input {
     height: 200px;
     object-fit: cover;
 }
+
+.switchMBO{
+    position: fixed;
+    display: inline-block;
+    top: 28px;
+    right: 115px;
+    width: 60px;
+    height: 34px;
+    z-index: 9999;
+}
+.switchMBO input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.sliderMBO{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #47B5FF;
+    border-radius: 34px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+.sliderMBO::before{
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: #06283D;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+input:checked+.sliderMBO{
+    background-color:#DFF6FF;
+}
+input:checked + .sliderMBO::before {
+    transform: translateX(26px);
+}
+
+.darkMODEDK{
+    background-color: #06283D;
+}

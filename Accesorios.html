@@ -9,6 +9,31 @@
 
 
 </head>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const modoOscuroGuardado = localStorage.getItem('modoOscuro');
+        const inputMOB = document.getElementById('inputMOB');
+
+        if (modoOscuroGuardado === 'true') {
+            document.body.classList.add('darkMODEDK');
+            if (inputMOB) inputMOB.checked = true;
+        }
+
+        if (inputMOB) {
+            inputMOB.addEventListener('change', () => {
+                document.body.classList.toggle('darkMODEDK');
+                localStorage.setItem('modoOscuro', document.body.classList.contains('darkMODEDK'));
+            });
+        }
+
+        const logo = document.getElementById("logoImagenRefresh");
+        if (logo) {
+            logo.addEventListener("click", () => {
+                window.location.href = "marcas.html";
+            });
+        }
+    });
+</script>
 
 <body>
     <nav>
@@ -55,7 +80,10 @@
             </svg>
         </button>
     </div>
-
+    <label class="switchMBO">
+        <input type="checkbox" id="inputMOB">
+        <span class="sliderMBO"></span>
+    </label>
     <div class="contenedor-productos">
 
         <div class="producto">
@@ -168,6 +196,7 @@
             </a>
         </div>
     </div>
+
 </body>
 <footer>
     <div class="piedepagina">
@@ -237,9 +266,3 @@
 </footer>
 
 </html>
-<script>
-    document.getElementById("logoImagenRefresh").addEventListener("click", () => {
-        window.location.href = "marcas.html";
-    });
-
-</script>

@@ -7,7 +7,31 @@
     <title>Herramientas de mano - Herramientas de golpe</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const modoOscuroGuardado = localStorage.getItem('modoOscuro');
+        const inputMOB = document.getElementById('inputMOB');
 
+        if (modoOscuroGuardado === 'true') {
+            document.body.classList.add('darkMODEDK');
+            if (inputMOB) inputMOB.checked = true;
+        }
+
+        if (inputMOB) {
+            inputMOB.addEventListener('change', () => {
+                document.body.classList.toggle('darkMODEDK');
+                localStorage.setItem('modoOscuro', document.body.classList.contains('darkMODEDK'));
+            });
+        }
+
+        const logo = document.getElementById("logoImagenRefresh");
+        if (logo) {
+            logo.addEventListener("click", () => {
+                window.location.href = "marcas.html";
+            });
+        }
+    });
+</script>
 <body>
     <nav>
         <div class="wrapper">

@@ -7,6 +7,31 @@
     <title>Herramienta de mano - Herramienta para atornillar</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const modoOscuroGuardado = localStorage.getItem('modoOscuro');
+        const inputMOB = document.getElementById('inputMOB');
+
+        if (modoOscuroGuardado === 'true') {
+            document.body.classList.add('darkMODEDK');
+            if (inputMOB) inputMOB.checked = true;
+        }
+
+        if (inputMOB) {
+            inputMOB.addEventListener('change', () => {
+                document.body.classList.toggle('darkMODEDK');
+                localStorage.setItem('modoOscuro', document.body.classList.contains('darkMODEDK'));
+            });
+        }
+
+        const logo = document.getElementById("logoImagenRefresh");
+        if (logo) {
+            logo.addEventListener("click", () => {
+                window.location.href = "marcas.html";
+            });
+        }
+    });
+</script>
 
 <body>
     <nav>
@@ -75,7 +100,8 @@
     <div class="contenedor-productos">
 
         <div class="producto">
-            <img src="https://www.demaquinasyherramientas.com/wp-content/uploads/2018/03/Destornillador.jpg" alt="Casilla 1">
+            <img src="https://www.demaquinasyherramientas.com/wp-content/uploads/2018/03/Destornillador.jpg"
+                alt="Casilla 1">
             <h3>Destornilladores</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
@@ -93,7 +119,8 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://resources.claroshop.com/medios-plazavip/s2/10835/1379835/5eab8fe6f266c-85f64ebb-b7a7-40ed-ba05-9e1027bb88bb-1600x1600.jpg" alt="Casilla 3">
+            <img src="https://resources.claroshop.com/medios-plazavip/s2/10835/1379835/5eab8fe6f266c-85f64ebb-b7a7-40ed-ba05-9e1027bb88bb-1600x1600.jpg"
+                alt="Casilla 3">
             <h3>Llaves Torx</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
@@ -102,8 +129,7 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_919245-MLM32001914966_082019-F.jpg"
-                alt="Casilla 4">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_919245-MLM32001914966_082019-F.jpg" alt="Casilla 4">
             <h3>Llaves combinadas</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
@@ -112,7 +138,8 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://th.bing.com/th/id/R.0c3b9f5c1438399d286adf069d3d32f6?rik=9QkpTWr3cklSFw&pid=ImgRaw&r=0" alt="Casilla 3">
+            <img src="https://th.bing.com/th/id/R.0c3b9f5c1438399d286adf069d3d32f6?rik=9QkpTWr3cklSFw&pid=ImgRaw&r=0"
+                alt="Casilla 3">
             <h3>Llaves inglesas</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
@@ -121,8 +148,7 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://wokinpanama.com/wp-content/uploads/2021/08/104118.jpg"
-                alt="Casilla 4">
+            <img src="https://wokinpanama.com/wp-content/uploads/2021/08/104118.jpg" alt="Casilla 4">
             <h3>Llaves de tubo</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
