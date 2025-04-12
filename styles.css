@@ -231,3 +231,22 @@ nav input {
 .boton-ver:hover {
     background: #47B5FF;
 }
+
+.seccion-marcas {
+    background-color: white;
+    padding-top: 100px; /* para dejar espacio debajo del nav fijo */
+    padding-bottom: 40px;
+}
+
+.contenedor-marcas {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contenedor-marcas img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px; /* antes era 10px */
+}
