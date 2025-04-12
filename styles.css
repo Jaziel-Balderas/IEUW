@@ -295,7 +295,6 @@ nav input {
     object-fit: cover;
 }
 
-<<<<<<< HEAD
 .switchMBO{
     position: fixed;
     display: inline-block;
@@ -343,7 +342,8 @@ input:checked + .sliderMBO::before {
 
 .darkMODEDK{
     background-color: #06283D;
-=======
+}
+
 /* style.css */
 
 /* RESET */
@@ -481,5 +481,5 @@ footer {
 .card-body {
     padding: 15px;
     text-align: center;
->>>>>>> 8e154e0d9de663b6e362edd06f3b6415562e0331
+
 }
