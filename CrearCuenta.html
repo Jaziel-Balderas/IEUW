@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
+    <title>Crear cuenta</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <script>
@@ -23,19 +23,7 @@
                 localStorage.setItem('modoOscuro', document.body.classList.contains('darkMODEDK'));
             });
         }
-        const form = document.getElementById("loginForm");
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const email = document.getElementById("email").value.trim();
-            const password = document.getElementById("password").value.trim();
-
-            if (email !== "" && password !== "") {
-                window.location.href = "MenuSesionIniciada.html";
-            }
-        });
     });
-
 </script>
 
 <body>
@@ -43,30 +31,34 @@
 
         <img src="logito.png" alt="Ferretera Janiel" class="logo">
         <div class="login-box">
-            <h2>Iniciar sesión</h2>
-            <form action="#" method="POST" id="loginForm">
+            <h2>Crear cuenta</h2>
+            <form action="#" method="POST">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+
                 <label for="email">Correo electrónico</label>
-                <input type="text" id="email" name="email" required>
+                <input type="email" id="email" name="email" required>
 
                 <label for="password">Contraseña</label>
                 <input type="password" id="password" name="password" required>
 
-                <button type="submit">Continuar</button>
+                <label for="confirmPassword">Confirmar contraseña</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+                <button type="submit" href="MenuSesionIniciada.html">Registrarse</button>
             </form>
+        </div>
 
-
+        <div class="new-account">
+            <p>¿Ya tienes una cuenta?</p>
+            <a href="login.html" class="create-account" style="color: rgb(65, 55, 173);">Inicia sesión</a>
         </div>
         <label class="switchMBO">
             <input type="checkbox" id="inputMOB">
             <span class="sliderMBO"></span>
         </label>
-        <div class="new-account">
-            <p>¿Eres nuevo en Ferretera Janiel?</p>
-            <a href="CrearCuenta.html" class="create-account" style="color: rgb(65, 55, 173);">Crea tu cuenta</a>
-        </div>
     </div>
 </body>
 
-</html>
 
 </html>

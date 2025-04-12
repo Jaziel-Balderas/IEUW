@@ -66,7 +66,7 @@ nav input {
 .BtnBuscarCaja {
     position: fixed;
     top: 18px;
-    right: 200px;
+    right: 280px;
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -172,6 +172,12 @@ nav input {
 }
 
 .producto h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: white;
+}
+
+.producto h4 {
     font-size: 16px;
     margin: 10px 0;
     color: white;
@@ -295,21 +301,23 @@ nav input {
     object-fit: cover;
 }
 
-.switchMBO{
+.switchMBO {
     position: fixed;
     display: inline-block;
     top: 28px;
-    right: 115px;
+    right: 150px;
     width: 60px;
     height: 34px;
     z-index: 9999;
 }
-.switchMBO input{
+
+.switchMBO input {
     opacity: 0;
     width: 0;
     height: 0;
 }
-.sliderMBO{
+
+.sliderMBO {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -321,7 +329,8 @@ nav input {
     -webkit-transition: 0.4s;
     transition: 0.4s;
 }
-.sliderMBO::before{
+
+.sliderMBO::before {
     position: absolute;
     content: '';
     height: 26px;
@@ -333,32 +342,196 @@ nav input {
     -webkit-transition: 0.4s;
     transition: 0.4s;
 }
-input:checked+.sliderMBO{
-    background-color:#DFF6FF;
+
+input:checked+.sliderMBO {
+    background-color: #DFF6FF;
 }
-input:checked + .sliderMBO::before {
+
+input:checked+.sliderMBO::before {
     transform: translateX(26px);
 }
 
 .darkMODEDK {
     background-color: #06283D;
     color: white;
-    .producto{
+
+    .producto {
         background: #1363DF;
     }
-    .piedepagina{
+
+    .piedepagina {
         background: #04152d;
     }
-    .card-group{
+
+    .card-group {
         background-color: #06283D;
         border-radius: 0px;
     }
-    .boton-ver{
-        background:#04152d ;
+
+    .boton-ver {
+        background: #04152d;
     }
-    .boton-ver:hover{
-        background:#DFF6FF ;
+
+    .boton-ver:hover {
+        background: #DFF6FF;
         color: black;
+    }
+
+    .login-container {
+        background-color: #04152d;
+    }
+
+    .create-account {
+        color: white;
     }
 }
 
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #DFF6FF;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.login-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #06283D;
+}
+
+.login-box label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #06283D;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1363DF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-box button:hover {
+    background-color: #47B5FF;
+}
+
+.new-account {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.NuevoUsuario {
+    position: fixed;
+    display: inline-block;
+    top: 15px;
+    right: 45px;
+    width: 60px;
+    height: 34px;
+    z-index: 9999;
+}
+
+.NuevoUsuario a {
+    font-size: 22px;
+    color: white
+}
+
+.NuevoUsuario:hover {
+    cursor: pointer;
+}
+
+.botonesPerfil {
+    display: none;
+    /* Oculta la lista por defecto */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1363DF;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+}
+
+.botonesPerfil li {
+    border-bottom: 1px solid;
+}
+
+.botonesPerfil li:last-child {
+    border-bottom: none;
+}
+
+.botonesPerfil li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.botonesPerfil li a:hover {
+    background-color: #DFF6FF;
+    color: black;
+}
+
+.profile-user:hover .botonesPerfil {
+    display: block;
+}
+
+.carbuy {
+    position: fixed;
+    top: 20px;
+    right: 630px;
+    z-index: 9999;
+}
+
+.carbuyBttn {
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carbuyBttn svg {
+    width: 30px;
+    height: 30px;
+
+}
