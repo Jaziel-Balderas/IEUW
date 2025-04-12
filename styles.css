@@ -340,8 +340,9 @@ input:checked + .sliderMBO::before {
     transform: translateX(26px);
 }
 
-.darkMODEDK{
+.darkMODEDK {
     background-color: #06283D;
+    color: white;
 }
 
 /* style.css */
