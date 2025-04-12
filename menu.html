@@ -12,22 +12,22 @@
     <nav>
         <div class="wrapper">
             <img src="IMAGENES/logito.png"
-                style="position: absolute; width: 100px; height: 100px; left: -2cm; top:-0.2cm">
+                style="position: absolute; width: 100px; height: 100px; left: -2cm; top:-0.2cm" id="logoImagenRefresh">
             <ul class="nav-links">
                 <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
                 <li>
                     <a href="#">MARCAS</a>
                 </li>
                 <li>
-                    <a href="#" class="desktop-item">HERRAMIENTAS DE MANO</a>
+                    <a href="HDM.html" class="desktop-item">HERRAMIENTAS DE MANO</a>
+                    <input type="checkbox">
+                </li>
+                <li>
+                    <a href="HPoder.html" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
                     <input type="checkbox" id="showMega">
                 </li>
                 <li>
-                    <a href="#" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
-                    <input type="checkbox" id="showMega">
-                </li>
-                <li>
-                    <a href="#" class="desktop-item">ACCESORIOS</a>
+                    <a href="Accesorios.html" class="desktop-item">ACCESORIOS</a>
                     <input type="checkbox" id="showMega">
                 </li>
                 <li>
@@ -60,3 +60,10 @@
 </body>
 
 </html>
+
+<script>
+    document.getElementById("logoImagenRefresh").addEventListener("click", () => {
+        window.location.href = "menu.html";
+    });
+
+</script>
