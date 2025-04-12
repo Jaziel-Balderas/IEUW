@@ -178,7 +178,7 @@ nav input {
 }
 
 .boton-ver {
-    position: relative; 
+    position: relative;
     display: block;
     margin-top: 10px;
     padding: 10px;
@@ -207,20 +207,29 @@ nav input {
 
 @keyframes martillo-movimiento {
     0% {
-        transform: rotate(50deg) translateY(-80px) translateX(-30px); /* Empieza normal */
+        transform: rotate(50deg) translateY(-80px) translateX(-30px);
+        /* Empieza normal */
     }
+
     25% {
-        transform: rotate(100deg) translateY(-80px) translateX(-30px); /* Se va hacia atrás */
+        transform: rotate(100deg) translateY(-80px) translateX(-30px);
+        /* Se va hacia atrás */
     }
+
     50% {
-        transform: rotate(-20deg) translateY(-50px) translateX(-30px); /* Golpe - martillo se mueve hacia adelante */
+        transform: rotate(-20deg) translateY(-50px) translateX(-30px);
+        /* Golpe - martillo se mueve hacia adelante */
     }
+
     75% {
-        transform: rotate(50deg) translateY(-80px) translateX(-30px); /* Retorna ligeramente hacia atrás */
+        transform: rotate(50deg) translateY(-80px) translateX(-30px);
+        /* Retorna ligeramente hacia atrás */
     }
+
     100% {
-        transform: rotate(50deg) translateY(-80px) translateX(-30px); /* Vuelve a la posición normal */
-    }  
+        transform: rotate(50deg) translateY(-80px) translateX(-30px);
+        /* Vuelve a la posición normal */
+    }
 }
 
 .boton-ver:hover .animacionMartillo {
@@ -233,8 +242,8 @@ nav input {
 }
 
 .seccion-marcas {
-    background-color: white;
-    padding-top: 100px; /* para dejar espacio debajo del nav fijo */
+    padding-top: 100px;
+    /* para dejar espacio debajo del nav fijo */
     padding-bottom: 40px;
 }
 
@@ -248,7 +257,8 @@ nav input {
 .contenedor-marcas img {
     width: 100%;
     height: auto;
-    border-radius: 30px; /* antes era 10px */
+    border-radius: 30px;
+    /* antes era 10px */
 }
 
 .piedepagina {
@@ -284,4 +294,3 @@ nav input {
     height: 200px;
     object-fit: cover;
 }
-
