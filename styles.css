@@ -272,7 +272,7 @@ nav input {
     text-align: center;
     background-color: #06283D;
     color: white;
-    padding: 20px;
+    padding: 20px 15px 20px 15px;
     top: 110px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 20px;
@@ -283,7 +283,7 @@ nav input {
     flex-direction: row;
     align-items: stretch;
     justify-content: center;
-    padding: 10px 10;
+    padding: 10px 10px;
 }
 
 .card {
@@ -295,6 +295,11 @@ nav input {
     flex: 1;
     max-width: 500px;
 }
+.footer-title {
+    font-size: 30px;
+    text-shadow: 2px 1px 6px black;
+}
+
 
 .card-img-top {
     height: 200px;
