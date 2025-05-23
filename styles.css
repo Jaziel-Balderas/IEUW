@@ -593,7 +593,7 @@ input:checked+.sliderMBO::before {
     }
 
     .BtnBuscarCaja {
-        position: static;
+        position: absolute;
         margin: 10px auto;
         justify-content: center;
     }
