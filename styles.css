@@ -807,7 +807,7 @@ input:checked+.sliderMBO::before {
     color: #ffffff;
 }
 
-.producto {
+.productocc {
 
     display: flex;
     align-items: flex-start;
@@ -816,11 +816,11 @@ input:checked+.sliderMBO::before {
     gap: 15px;
     justify-content: center;
     width: 500px;
-    background-color: #1b3b5e;
+    background-color: #044b96;
 
 }
 
-.producto img {
+.productocc img {
     width: 120px;
     height: 120px;
     object-fit: cover;
