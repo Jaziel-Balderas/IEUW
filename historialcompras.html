@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historial de comprasr</title>
+    <title>Historial de compras</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
@@ -30,6 +31,84 @@
                 window.location.href = "MenuSesionIniciada.html";
             });
         }
+
+        // JavaScript for handling purchase details modal
+        const purchaseButtons = document.querySelectorAll('.boton-ver');
+        const modal = document.getElementById('purchaseDetailModal');
+        const closeModalButton = document.getElementById('closeModal');
+        const modalTitle = document.getElementById('modalPurchaseTitle');
+        const modalDate = document.getElementById('modalPurchaseDate');
+        const modalItemsContainer = document.getElementById('modalPurchaseItems');
+        const modalTotal = document.getElementById('modalPurchaseTotal');
+
+        purchaseButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                const purchaseCard = button.closest('.purchase-record');
+                const purchaseId = purchaseCard.dataset.purchaseId;
+                const purchaseDate = purchaseCard.dataset.purchaseDate;
+                const purchaseTotal = purchaseCard.dataset.purchaseTotal;
+                const dummyPurchaseDetails = {
+                    'purchase-1': [
+                        { name: 'Martillo de uña', quantity: 1, price: 150.00, image: 'https://distribuidortruper.mx/wp-content/uploads/2021/03/martillos-truper.jpg' },
+                        { name: 'Juego de desarmadores', quantity: 1, price: 280.00, image: 'https://www.truper.com/media/product/bbb/juego-de-5-desarmadores-mango-comfort-grip-truper-592.jpg' }
+                    ],
+                    'purchase-2': [
+                        { name: 'Taladro eléctrico', quantity: 1, price: 1200.00, image: 'https://th.bing.com/th/id/R.0d1675d6b27bff7d9ba3a5f6c7395cdd?rik=quhbtSgNYpb4Hg&pid=ImgRaw&r=0' }
+                    ],
+                    'purchase-3': [
+                        { name: 'Cinta métrica', quantity: 2, price: 80.00, image: 'https://static.grainger.com/rp/s/is/image/Grainger/28G162_AS01?$zmmain$' },
+                        { name: 'Llave ajustable', quantity: 1, price: 180.00, image: 'https://temex.vteximg.com.br/arquivos/ids/1005963/44022106PDM001B.jpg?v=638791771912370000' },
+                    ],
+                    'purchase-4': [
+                        { name: 'Set de brocas', quantity: 1, price: 350.00, image: 'https://www.truper.com/media/product/5c8/juego-de-100-brocas-y-puntas-en-estuche-plastico-truper-f2f.jpg' },
+                        { name: 'Pintura Blanca 1 Litro', quantity: 2, price: 100.00, image: 'https://cdn.homedepot.com.mx/productos/708925/708925-d.jpg' }
+                    ],
+                    'purchase-5': [
+                        { name: 'Sierra circular', quantity: 1, price: 2500.00, image: 'https://etoledo.vteximg.com.br/arquivos/ids/204550-535-535/HNC51514-1.png?v=637414840735300000' },
+                        { name: 'Guantes de seguridad', quantity: 1, price: 90.00, image: 'https://cdn11.bigcommerce.com/s-qnih6ewukd/images/stencil/500x659/products/569/1045/Guante_de_fibra_de_vidrio_y_supraneema_extra_safe_nitfoam__28308.1700077409.jpg?c=2  ' }
+                    ]
+                };
+
+                const items = dummyPurchaseDetails[purchaseId] || [];
+
+                modalTitle.textContent = Detalles de la compra #${purchaseId.replace('purchase-', '')}; // Use generic title
+                modalDate.textContent = Fecha del pedido: ${purchaseDate};
+                modalTotal.textContent = Total: $${parseFloat(purchaseTotal).toFixed(2)};
+                modalItemsContainer.innerHTML = ''; // Clear previous items
+
+                if (items.length > 0) {
+                    items.forEach(item => {
+                        const itemDiv = document.createElement('div');
+                        itemDiv.classList.add('modal-item');
+                        itemDiv.innerHTML = `
+                            <img src="${item.image}" alt="${item.name}">
+                            <div class="item-details">
+                                <span class="item-name">${item.name}</span>
+                                <span class="item-quantity">Cantidad: ${item.quantity}</span>
+                                <span class="item-price">$${item.price.toFixed(2)} c/u</span>
+                            </div>
+                        `;
+                        modalItemsContainer.appendChild(itemDiv);
+                    });
+                } else {
+                    modalItemsContainer.innerHTML = '<p>No hay detalles de productos para esta compra.</p>';
+                }
+
+
+                modal.classList.remove('hidden');
+            });
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
     });
 </script>
 
@@ -41,19 +120,19 @@
             <ul class="nav-links">
                 <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
                 <li>
-                    <a href="HDM.html" class="desktop-item">HERRAMIENTAS DE MANO</a>
+                    <a href="/HERRAMIENTASDEMANO/HDM.html" class="desktop-item">HERRAMIENTAS DE MANO</a>
                     <input type="checkbox">
                 </li>
                 <li>
-                    <a href="HPoder.html" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
+                    <a href="/HERRAMIENTAS ELECTRICAS/HPoder.html" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
                     <input type="checkbox" id="showMega">
                 </li>
                 <li>
-                    <a href="Accesorios.html" class="desktop-item">ACCESORIOS</a>
+                    <a href="/ACCESORIOSNAV/Accesorios.html" class="desktop-item">ACCESORIOS</a>
                     <input type="checkbox" id="showMega">
                 </li>
                 <li>
-                    <a href="OtrasHerramientas.html" class="desktop-item">OTROS</a>
+                    <a href="/OTROS/OtrasHerramientas.html" class="desktop-item">OTROS</a>
                     <input type="checkbox" id="showDrop">
                 </li>
             </ul>
@@ -63,8 +142,7 @@
         <input type="text" placeholder="Buscar...." class="btnbusqueda">
         <button class="imgboton">
             <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                <path
+                viewBox="0 0 512 512"><path
                     d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
             </svg>
         </button>
@@ -72,8 +150,7 @@
     <div class="profile-user">
         <button class="logouser">
             <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                <path
+                viewBox="0 0 448 512"><path
                     d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
             </svg>
         </button>
@@ -87,132 +164,198 @@
         <input type="checkbox" id="inputMOB">
         <span class="sliderMBO"></span>
     </label>
-    <div class="contenedor-productos">
-        <div class="producto">
-            <h3>Compra 1</h3>
-            <h4> Fecha: 28/02/2024</h4>
-            <a href="#" class="boton-ver">Ver
-                <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
-                </span>
-            </a>
+
+    <div class="contenedor-historialcompra">
+        <h2>Tus Pedidos</h2>
+
+        <div class="purchase-record" data-purchase-id="purchase-1" data-purchase-date="28 de Febrero de 2024"
+            data-purchase-total="430.00">
+            <div class="purchase-header">
+                <div class="order-info">
+                    <h3>PEDIDO REALIZADO</h3>
+                    <h4>28 de Febrero de 2024</h4>
+                </div>
+                <div class="order-total">
+                    TOTAL: $430.00
+                </div>
+            </div>
+            <div class="purchase-items-preview">
+                <div class="purchase-item">
+                    <img src="https://distribuidortruper.mx/wp-content/uploads/2021/03/martillos-truper.jpg" alt="Martillo de uña">
+                    <div class="purchase-item-details">
+                        <span class="item-name">Martillo de uña</span>
+                        <span class="item-quantity">Cantidad: 1</span>
+                        <span class="item-price">$150.00 c/u</span>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="https://www.truper.com/media/product/bbb/juego-de-5-desarmadores-mango-comfort-grip-truper-592.jpg" alt="Juego de desarmadores">
+                    <div class="purchase-item-details">
+                        <span class="item-name">Juego de desarmadores</span>
+                        <span class="item-quantity">Cantidad: 1</span>
+                        <span class="item-price">$280.00 c/u</span>
+                    </div>
+                </div>
+            </div>
+            <div class="purchase-actions">
+                <a href="#" class="boton-ver">Ver detalles del pedido</a>
+                <a href="#" class="boton-comprar-de-nuevo">Comprar de nuevo</a>
+            </div>
         </div>
-        <div class="producto">
-            <h3>Compra 2</h3>
-            <h4> Fecha: 01/05/2024</h4>
-            <a href="#" class="boton-ver">Ver
-                <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
-                </span>
-            </a>
+
+        <div class="purchase-record" data-purchase-id="purchase-2" data-purchase-date="01 de Mayo de 2024"
+            data-purchase-total="1200.00">
+            <div class="purchase-header">
+                <div class="order-info">
+                    <h3>PEDIDO REALIZADO</h3>
+                    <h4>01 de Mayo de 2024</h4>
+                </div>
+                <div class="order-total">
+                    TOTAL: $1200.00
+                </div>
+            </div>
+            <div class="purchase-items-preview">
+                <div class="purchase-item">
+                    <img src="https://th.bing.com/th/id/R.0d1675d6b27bff7d9ba3a5f6c7395cdd?rik=quhbtSgNYpb4Hg&pid=ImgRaw&r=0" alt="Taladro eléctrico">
+                    <div class="purchase-item-details">
+                        <span class="item-name">Taladro eléctrico</span>
+                        <span class="item-quantity">Cantidad: 1</span>
+                        <span class="item-price">$1200.00 c/u</span>
+                    </div>
+                </div>
+            </div>
+            <div class="purchase-actions">
+                <a href="#" class="boton-ver">Ver detalles del pedido</a>
+                <a href="#" class="boton-comprar-de-nuevo">Comprar de nuevo</a>
+            </div>
         </div>
-        <div class="producto">
-            <h3>Compra 3 </h3>
-            <h4> Fecha: 17/06/2024</h4>
-            <a href="#" class="boton-ver">Ver
-                <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
-                </span>
-            </a>
+
+        <div class="purchase-record" data-purchase-id="purchase-3" data-purchase-date="17 de Junio de 2024"
+            data-purchase-total="480.00">
+            <div class="purchase-header">
+                <div class="order-info">
+                    <h3>PEDIDO REALIZADO</h3>
+                    <h4>17 de Junio de 2024</h4>
+                </div>
+                <div class="order-total">
+                    TOTAL: $480.00
+                </div>
+            </div>
+            <div class="purchase-items-preview">
+                <div class="purchase-item">
+                    <img src="https://static.grainger.com/rp/s/is/image/Grainger/28G162_AS01?$zmmain$" alt="Cinta métrica">
+                    <div class="purchase-item-details">
+                        <span class="item-name">Cinta métrica</span>
+                        <span class="item-quantity">Cantidad: 2</span>
+                        <span class="item-price">$80.00 c/u</span>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="https://temex.vteximg.com.br/arquivos/ids/1005963/44022106PDM001B.jpg?v=638791771912370000" alt="Llave ajustable">
+                    <div class="purchase-item-details">
+                        <span class="item-name">Llave ajustable</span>
+                        <span class="item-quantity">Cantidad: 1</span>
+                        <span class="item-price">$180.00 c/u</span>
+                    </div>
+                </div>
+                </div>
+            <div class="purchase-actions">
+                <a href="#" class="boton-ver">Ver detalles del pedido</a>
+                <a href="#" class="boton-comprar-de-nuevo">Comprar de nuevo</a>
+            </div>
         </div>
-        <div class="producto">
-            <h3>Compra 4</h3>
-            <h4> Fecha: 21/07/2024</h4>
-            <a href="#" class="boton-ver">Ver
-                <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
-                </span>
-            </a>
+
+        <div class="purchase-record" data-purchase-id="purchase-4" data-purchase-date="21 de Julio de 2024"
+            data-purchase-total="550.00">
+            <div class="purchase-header">
+                <div class="order-info">
+                    <h3>PEDIDO REALIZADO</h3>
+                    <h4>21 de Julio de 2024</h4>
+                </div>
+                <div class="order-total">
+                    TOTAL: $550.00
+                </div>
+            </div>
+            <div class="purchase-items-preview">
+                <div class="purchase-item">
+                    <img src="https://www.truper.com/media/product/5c8/juego-de-100-brocas-y-puntas-en-estuche-plastico-truper-f2f.jpg" alt="Set de brocas">
+                    <div class="purchase-item-details">
+                        <span class="item-name">Set de brocas</span>
+                        <span class="item-quantity">Cantidad: 1</span>
+                        <span class="item-price">$350.00 c/u</span>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="https://cdn.homedepot.com.mx/productos/708925/708925-d.jpg" alt="Pintura Blanca">
+                    <div class="purchase-item-details">
+                        <span class="item-name">Pintura Blanca 1 Litro</span>
+                        <span class="item-quantity">Cantidad: 2</span>
+                        <span class="item-price">$100.00 c/u</span>
+                    </div>
+                </div>
+            </div>
+            <div class="purchase-actions">
+                <a href="#" class="boton-ver">Ver detalles del pedido</a>
+                <a href="#" class="boton-comprar-de-nuevo">Comprar de nuevo</a>
+            </div>
         </div>
-        <div class="producto">
-            <h3>Compra 5 </h3>
-            <h4> Fecha: 05/03/2025</h4>
-            <a href="#" class="boton-ver">Ver
-                <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
-                </span>
-            </a>
+
+        <div class="purchase-record" data-purchase-id="purchase-5" data-purchase-date="05 de Marzo de 2025"
+            data-purchase-total="2590.00">
+            <div class="purchase-header">
+                <div class="order-info">
+                    <h3>PEDIDO REALIZADO</h3>
+                    <h4>05 de Marzo de 2025</h4>
+                </div>
+                <div class="order-total">
+                    TOTAL: $2590.00
+                </div>
+            </div>
+            <div class="purchase-items-preview">
+                <div class="purchase-item">
+                    <img src="https://etoledo.vteximg.com.br/arquivos/ids/204550-535-535/HNC51514-1.png?v=637414840735300000" alt="Sierra circular">
+                    <div class="purchase-item-details">
+                        <span class="item-name">Sierra circular</span>
+                        <span class="item-quantity">Cantidad: 1</span>
+                        <span class="item-price">$2500.00 c/u</span>
+                    </div>
+                </div>
+                <div class="purchase-item">
+                    <img src="https://cdn11.bigcommerce.com/s-qnih6ewukd/images/stencil/500x659/products/569/1045/Guante_de_fibra_de_vidrio_y_supraneema_extra_safe_nitfoam__28308.1700077409.jpg?c=2" alt="Guantes de seguridad">
+                    <div class="purchase-item-details">
+                        <span class="item-name">Guantes de seguridad</span>
+                        <span class="item-quantity">Cantidad: 1</span>
+                        <span class="item-price">$90.00 c/u</span>
+                    </div>
+                </div>
+            </div>
+            <div class="purchase-actions">
+                <a href="#" class="boton-ver">Ver detalles del pedido</a>
+                <a href="#" class="boton-comprar-de-nuevo">Comprar de nuevo</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="purchaseDetailModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h2 id="modalPurchaseTitle"></h2>
+            <p id="modalPurchaseDate"></p>
+            <div id="modalPurchaseItems" class="purchase-items-container">
+                </div>
+            <p id="modalPurchaseTotal" class="purchase-total"></p>
         </div>
     </div>
+
     <div class="carbuy">
-        
-        <a href="../carritodecompras.html" class="carbuyBttn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                <path
+        <button class="carbuyBttn">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"><path
                     d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
             </svg>
-                <span id="contador-carrito">0</span>
-
-        </a>
+        </button>
     </div>
-
-    
 </body>
-<footer>
-    <div class="piedepagina">
-        <div class="card-group">
-            <div class="card" style="background-color: #1363DF;">
-                <div class="card-body" style="text-shadow: 2px 1px 6px black;">
-                    <h5 class="card-title" style="font-size: 30px;">Acerca de nosotros</h5>
-                    <p class="card-text" style="font-size: 25px; padding: 30px 50px;">
-                        Somos ferretería dedicada a la venta de materiales ferreteros
-                        para todo tipo de obra o necesidad, cuidando siempre la calidad
-                        y el servicio al cliente.
-                    </p>
-                </div>
-            </div>
-            <div class="card" style="background-color: #1363DF;">
-                <img src="https://th.bing.com/th/id/OIP.MQ_IzgkJGdZdiskEocChXQAAAA?rs=1&pid=ImgDetMain"
-                    class="card-img-top" alt="..." style="padding: 10px 10px;">
-                <div class="card-body">
-                    <h5 class="card-title" style="text-shadow: 2px 1px 6px black; font-size: 25px;">Ubicación</h5>
-                    <p class="card-text" style="text-shadow: 2px 1px 6px black;">
-                        Av. Sierra Madre 304 <br>
-                        Col. Los Nogales 19520 <br>
-                        Monterrey N.L.
-                    </p>
-                </div>
-            </div>
-            <div class="card" style="background-color: #1363DF;">
-                <div class="card-body" style="font-size: 25px;">
-                    <h5 class="card-title">Redes sociales</h5>
-                    <p class="card-text">
-                        <label
-                            style=" display: flex; align-items: center; justify-content: center; text-shadow: 2px 1px 6px black;"><svg
-                                width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path
-                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                            </svg> Instagram: Ferreteria Janiel
-                        </label>
-                        <br>
-                        <label
-                            style=" display: flex; align-items: center; justify-content: center; text-shadow: 2px 1px 6px black;"><svg
-                                width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path
-                                    d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
-                            </svg> Facebook: Ferreteria Janiel
-                        </label>
-                        <br>
-                        <label
-                            style=" display: flex; align-items: center; justify-content: center; text-shadow: 2px 1px 6px black;"><svg
-                                width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path
-                                    d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z" />
-                            </svg> Tiktok: @Ferreteria-Janiel
-                        </label>
-                        <br>
-                        <label
-                            style=" display: flex; align-items: center; justify-content: center; text-shadow: 2px 1px 6px black;"><svg
-                                width="35" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path
-                                    d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
-                            </svg> Telefono: 812 986 2323
-                        </label>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
 
 </html>

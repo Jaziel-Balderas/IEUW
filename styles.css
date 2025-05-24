@@ -400,11 +400,13 @@ input:checked+.sliderMBO::before {
     .modal-content {
         background-color: #06283D;
     }
-    .carrito{
+
+    .carrito {
         background-color: #7cb9e1;
     }
-    .carrito h2{
-        color:black;
+
+    .carrito h2 {
+        color: black;
     }
 
 }
@@ -564,99 +566,417 @@ input:checked+.sliderMBO::before {
 
 /* === RESPONSIVE DESIGN === */
 
-/* Para tablets (pantallas entre 768px y 1024px) */
-@media (max-width: 1024px) {
-    .BtnBuscarCaja {
-        right: 180px;
-        width: 220px;
+/* === RESPONSIVE DESIGN === */
+
+/* Tablets (768px a 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    nav .wrapper {
+        padding: 20px;
+        height: 160px;
+        line-height: 60px;
     }
 
-    .btnbusqueda {
-        width: 160px;
-        font-size: 13px;
+    #logoImagenRefresh {
+        margin-left: 75px;
+        margin-top: 0px;
+    }
+
+    .carbuy {
+        margin-top: 50px;
+        margin-right: -485px;
     }
 
     .switchMBO {
-        right: 100px;
-    }
-
-    .profile-user {
-        right: 20px;
-    }
-
-    .producto {
-        width: 45%;
-    }
-
-    .card-group {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Para móviles (pantallas menores a 768px) */
-@media (max-width: 768px) {
-    nav .wrapper {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-
-    .wrapper .nav-links {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .nav-links li {
-        width: 100%;
-        text-align: center;
+        margin-right: -60px;
+        margin-top: -10px;
     }
 
     .BtnBuscarCaja {
-        position: absolute;
-        margin: 10px auto;
-        justify-content: center;
+        margin-top: -10px;
+        width: 250px;
+        height: 0px;
+    }
+
+    .wrapper .logo a {
+        font-size: 26px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 12px;
+    }
+
+    .producto {
+        margin-top: 80px;
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+        padding: 7px 10px;
+    }
+
+    .BtnBuscarCaja {
+        right: 180px;
+        height: 50px;
+        padding: 3px 7px;
     }
 
     .btnbusqueda {
-        width: 100%;
-        font-size: 14px;
+        width: 200px;
+        font-size: 13px;
+        padding: 10px 8px;
     }
 
-    .imgboton {
-        margin-left: 5px;
+    .imgboton,
+    .logouser,
+    .carbuyBttn {
+        width: 45px;
+        height: 45px;
     }
 
-    .switchMBO,
+    .imgboton svg,
+    .profile-user svg,
+    .carbuyBttn svg {
+        width: 18px;
+        height: 18px;
+    }
+
     .profile-user {
-        position: static;
-        margin-top: 10px;
+        top: 15px;
+        right: 35px;
+    }
+
+    .carbuy {
+        right: 520px;
+        top: 18px;
     }
 
     .contenedor-productos {
+        top: 90px;
+        gap: 45px;
+        padding: 15px;
+    }
+
+    .producto {
+        width: 260px;
+        padding: 12px;
+        border-radius: 25px;
+    }
+
+    .producto img {
+        height: 160px;
+    }
+
+    .producto h3,
+    .producto h4 {
+        font-size: 14px;
+    }
+
+    .boton-ver {
+        padding: 8px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+
+    .seccion-marcas {
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+
+    .contenedor-marcas {
+        max-width: 900px;
+        padding: 0 15px;
+    }
+
+    .piedepagina {
+        font-size: 18px;
+        padding: 15px 10px;
+        top: 90px;
+    }
+
+    .card-group {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .card {
+        max-width: 400px;
+        flex: 1 1 45%;
+    }
+
+    .modal.hidden {
+        margin-top: 300px;
+        width: 50px;
+        height: 5px;
+
+    }
+
+    .info-producto {
+        margin-top: -20px;
+    }
+
+    #modal-img {
+        position: absolute;
+        width: 155px;
+        height: 155px;
+        margin-top: 50px;
+        margin-left: 320px;
+    }
+    .login-box{
+        margin-top: 100px;
+        top: 1px;
+    }
+    .contenedor-historialcompra{
+        position: absolute;
+        top:200px;
+        width: 800px;
+    }
+}
+
+/* Móviles (menos de 768px) */
+@media (max-width: 767px) {
+    nav .wrapper {
+        flex-direction: column;
+        height: auto;
+        margin-top: 75px;
+        padding: 15px;
+        line-height: normal;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    #logoImagenRefresh {
+        margin-left: 75px;
+        margin-top: -70px;
+    }
+
+    .wrapper .logo a {
+        font-size: 24px;
+    }
+
+    .switchMBO {
+        margin-top: 0px;
+        margin-right: 95px;
+
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        /* Ocultamos menú para mostrar menú hamburguesa */
+    }
+
+    nav input:checked~.nav-links {
+        display: flex;
+    }
+
+    .nav-links li a {
+        font-size: 16px;
+        padding: 10px 15px;
+        display: block;
+        width: 100%;
+    }
+
+    /* Estilo para menú hamburguesa (agrega HTML si no lo tienes) */
+    nav label {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 25px;
+        position: relative;
+    }
+
+    nav label span,
+    nav label span::before,
+    nav label span::after {
+        display: block;
+        background-color: #f2f2f2;
+        height: 3px;
+        width: 100%;
+        border-radius: 2px;
+        position: absolute;
+        content: '';
+        transition: all 0.3s ease;
+    }
+
+    nav label span {
+        top: 50%;
+        margin-top: -1.5px;
+    }
+
+    nav label span::before {
+        top: -8px;
+    }
+
+    nav label span::after {
+        bottom: -8px;
+    }
+
+    nav input:checked+label span {
+        background-color: transparent;
+    }
+
+    nav input:checked+label span::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    nav input:checked+label span::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    .BtnBuscarCaja {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        height: 45px;
+        padding: 3px 6px;
+        z-index: 10000;
+    }
+
+    .btnbusqueda {
+        width: 150px;
+        font-size: 14px;
+        padding: 8px 6px;
+    }
+
+    .imgboton,
+    .logouser,
+    .carbuyBttn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .imgboton svg,
+    .profile-user svg,
+    .carbuyBttn svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .profile-user {
+        top: 70px;
+        right: 90px;
+    }
+
+    .carbuy {
+        right: 30px;
+        top: 70px;
+    }
+
+    .contenedor-productos {
+        flex-direction: column;
+        align-items: center;
         gap: 30px;
+        padding: 10px;
+        top: 300px;
     }
 
     .producto {
         width: 90%;
+        max-width: 320px;
+        padding: 25px;
+        border-radius: 20px;
     }
 
-    .card {
-        max-width: 90%;
+    .producto img {
+        height: 150px;
     }
 
-    .contenedor-marcas img {
+    .producto h3,
+    .producto h4 {
+        font-size: 14px;
+    }
+
+    .boton-ver {
+        padding: 10px;
+        font-size: 15px;
         border-radius: 15px;
+    }
+
+    .seccion-marcas {
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+
+    .contenedor-marcas {
+        max-width: 100%;
+        padding: 0 10px;
     }
 
     .piedepagina {
         font-size: 16px;
+        padding: 15px 10px;
+        top: 90px;
     }
 
-    .footer-title {
-        font-size: 24px;
+    .card-group {
+        flex-direction: column;
+        padding: 0 10px;
     }
+
+    .card {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Ajuste para login-box en móviles */
+    .login-box {
+        padding: 30px 20px;
+        width: 95%;
+        max-width: 350px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .modal-hidden {
+        width: 5px;
+        height: 5px;
+    }
+
+    #modal-img {
+        position: absolute;
+        width: 155px;
+        height: 155px;
+    }
+
+    .info-producto {
+        margin-top: 160px;
+    }
+
+    .contenedor-marcas {
+        margin-top: 240px;
+    }
+
+    .texcel {
+        margin-top: 300px;
+    }
+
+    .celdise {
+        margin-top: 300px;
+    }
+
+    .login-box {
+        top: 300px;
+    }
+
+    .carrito {
+        top: 400px;
+        left: -500px;
+
+    }
+
+    .contenedor-historialcompra {
+        position: absolute;
+        top: 9cm;
+        height: 300px;
+        width: 430px;
+    }
+
 }
 
 
@@ -905,4 +1225,356 @@ input:checked+.sliderMBO::before {
 
 .btn-comprar:hover {
     background-color: #1565c0;
+}
+
+/* Estilos para el modal de compra */
+/* --- Amazon-style Historial de Compra Container --- */
+.contenedor-historialcompra {
+    max-width: 1200px;
+    margin: 0px auto 50px auto;
+    padding: 0 20px;
+    background-color: #DFF6FF;
+}
+
+.contenedor-historialcompra h2 {
+    font-size: 2.2em;
+    color: #06283D;
+    margin-bottom: 30px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Individual Purchase Record (Order Box) */
+.purchase-record {
+    background: #FFFFFF;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.purchase-header {
+    display: absolute;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 1px;
+}
+
+.purchase-header .order-info {
+    text-align: left;
+}
+
+.purchase-header .order-info h3 {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.purchase-header .order-info h4 {
+    font-size: 1.3em;
+    color: #000;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.purchase-header .order-total {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #000;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.purchase-items-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* MODIFIED: Styles for individual items within the purchase record */
+.purchase-item {
+    display: flex;
+    flex-direction: column;
+    /* Stack image and details vertically */
+    align-items: center;
+    gap: 10px;
+    width: calc(50% - 7.5px);
+    /* Two items per row by default */
+    background-color: #06283D;
+    /* Mimics .producto background */
+    padding: 15px;
+    border-radius: 10px;
+    /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    text-align: center;
+    /* Center content like .producto */
+}
+
+.purchase-item img {
+    width: 80px;
+    /* Larger image in preview */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    /* Slightly rounded corners */
+    border: 1px solid #1363DF;
+    /* Border color from your theme */
+}
+
+.purchase-item-details {
+    flex-grow: 1;
+    text-align: center;
+    /* Center text details */
+}
+
+.purchase-item-details .item-name {
+    font-weight: bold;
+    color: #DFF6FF;
+    /* Light text for dark background */
+    font-size: 1em;
+    /* Slightly larger for readability */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.purchase-item-details .item-quantity,
+.purchase-item-details .item-price {
+    font-size: 0.9em;
+    color: #ADD8E6;
+    /* Lighter blue for quantity/price */
+    display: block;
+    margin-bottom: 2px;
+}
+
+.purchase-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Specific button styles for Amazon-like look */
+.purchase-actions .boton-ver,
+.purchase-actions .boton-comprar-de-nuevo {
+    padding: 10px 20px;
+    background-color: #f0c14b;
+    color: #111;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.9em;
+    border: 1px solid #a88734;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.purchase-actions .boton-ver:hover,
+.purchase-actions .boton-comprar-de-nuevo:hover {
+    background-color: #e4b93b;
+    border-color: #92752d;
+}
+
+/* Modal for purchase details */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    color: #333;
+    /* Ensure text is readable in light mode */
+}
+
+/* Add animation (fade in) */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.modal-content h2,
+.modal-content p {
+    color: #333;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-item:last-child {
+    border-bottom: none;
+}
+
+.modal-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.modal-item .item-details {
+    flex-grow: 1;
+}
+
+.modal-item .item-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.modal-item .item-quantity,
+.modal-item .item-price {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.purchase-total {
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    color: #000;
+}
+
+
+/* --- Dark Mode specific styles for the purchase history container --- */
+.darkMODEDK .contenedor-historialcompra {
+    background-color: #06283D;
+    color: #DFF6FF;
+}
+
+.darkMODEDK .contenedor-historialcompra h2 {
+    color: #DFF6FF;
+}
+
+.darkMODEDK .purchase-record {
+    background: #1363DF;
+    border-color: #0e4cbe;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.darkMODEDK .purchase-header {
+    border-bottom-color: #0e4cbe;
+}
+
+.darkMODEDK .purchase-header .order-info h3,
+.darkMODEDK .purchase-header .order-info h4,
+.darkMODEDK .purchase-header .order-total {
+    color: #DFF6FF;
+}
+
+/* MODIFIED: Dark mode for individual items within the purchase record */
+.darkMODEDK .purchase-item {
+    background-color: #0b3a8c;
+    /* Darker background for item previews */
+    border-color: #0e4cbe;
+}
+
+.darkMODEDK .purchase-item img {
+    border-color: #0e4cbe;
+}
+
+.darkMODEDK .purchase-item-details .item-name {
+    color: #DFF6FF;
+}
+
+.darkMODEDK .purchase-item-details .item-quantity,
+.darkMODEDK .purchase-item-details .item-price {
+    color: #90d4ff;
+}
+
+.darkMODEDK .purchase-actions .boton-ver,
+.darkMODEDK .purchase-actions .boton-comprar-de-nuevo {
+    background-color: #2D9596;
+    color: #DFF6FF;
+    border-color: #1a5e5e;
+}
+
+.darkMODEDK .purchase-actions .boton-ver:hover,
+.darkMODEDK .purchase-actions .boton-comprar-de-nuevo:hover {
+    background-color: #3bafa7;
+    border-color: #24817a;
+}
+
+.darkMODEDK .modal-content {
+    background: #06283D;
+    color: #DFF6FF;
+}
+
+.darkMODEDK .modal-content h2,
+.darkMODEDK .modal-content p,
+.darkMODEDK .modal-item .item-name,
+.darkMODEDK .modal-item .item-quantity,
+.darkMODEDK .modal-item .item-price,
+.darkMODEDK .purchase-total {
+    color: #DFF6FF;
+}
+
+.darkMODEDK .modal-item {
+    border-bottom-color: #0e4cbe;
 }
