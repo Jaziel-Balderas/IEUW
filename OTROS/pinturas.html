@@ -6,32 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinturas</title>
     <link rel="stylesheet" href="../styles.css">
+    <script src="../js.js"></script>
 </head>
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const modoOscuroGuardado = localStorage.getItem('modoOscuro');
-        const inputMOB = document.getElementById('inputMOB');
 
-        if (modoOscuroGuardado === 'true') {
-            document.body.classList.add('darkMODEDK');
-            if (inputMOB) inputMOB.checked = true;
-        }
-
-        if (inputMOB) {
-            inputMOB.addEventListener('change', () => {
-                document.body.classList.toggle('darkMODEDK');
-                localStorage.setItem('modoOscuro', document.body.classList.contains('darkMODEDK'));
-            });
-        }
-
-        const logo = document.getElementById("logoImagenRefresh");
-        if (logo) {
-            logo.addEventListener("click", () => {
-                window.location.href = "../MenuSesionIniciada.html";
-            });
-        }
-    });
-</script>
 
 <body>
     <nav>
@@ -78,9 +55,9 @@
             </svg>
         </button>
         <ul class="botonesPerfil">
-            <li><a href="datosusuario.html">Mi perfil</a></li>
-            <li><a href="historialcompras.html">Historial de compras</a></li>
-            <li><a href="marcas.html">Cerrar sesión</a></li>
+            <li><a href="../datosusuario.html">Mi perfil</a></li>
+            <li><a href="../historialcompras.html">Historial de compras</a></li>
+            <li><a href="../marcas.html">Cerrar sesión</a></li>
         </ul>
     </div>
     <label class="switchMBO">
@@ -193,14 +170,66 @@
             </a>
         </div>
     </div>
+    <div id="modalCompra" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-producto">
+                <img id="modal-img" src="" alt="Producto">
+                <div class="info-producto">
+                    <h3 id="modal-nombre"></h3>
+                    <p><strong>Precio:</strong> $<span id="modal-precio">0</span></p>
+                    <p><strong>Stock disponible:</strong> <span id="modal-stock">0</span></p>
+
+
+                    <label for="modal-cantidad">Cantidad:</label>
+                    <input type="number" id="modal-cantidad" min="1" value="1">
+
+                    <label>Método de pago:</label>
+                    <select id="modal-metodo-pago">
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta</option>
+                    </select>
+
+                    <div id="form-efectivo" class="metodo-form">
+                        <label for="correo">Correo para cotización:</label>
+                        <input type="email" id="correo">
+                    </div>
+
+                    <div id="form-tarjeta" class="metodo-form hidden">
+                        <label for="num-tarjeta">Número de tarjeta:</label>
+                        <input type="text" id="num-tarjeta">
+
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv">
+
+                        <label for="vencimiento">Vencimiento:</label>
+                        <input type="month" id="vencimiento">
+                    </div>
+
+                    <div class="modal-buttons">
+                        <button id="btn-comprar" class="btn btn-primary">Comprar ahora</button>
+                        <button id="btn-carrito" class="btn btn-secondary">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalMensaje" class="modal hidden">
+        <div class="modal-content mensaje-content">
+            <span id="cerrarMensaje" class="close-button">&times;</span>
+            <p id="textoMensaje"></p>
+        </div>
+    </div>
     <div class="carbuy">
-        <button class="carbuyBttn">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+
+        <a href="../carritodecompras.html" class="carbuyBttn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                 <path
                     d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z" />
             </svg>
-        </button>
+            <span id="contador-carrito">0</span>
+
+        </a>
     </div>
 </body>
 <footer>

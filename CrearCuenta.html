@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear cuenta</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="../js.js"></script>
 </head>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
@@ -32,7 +33,7 @@
         <img src="logito.png" alt="Ferretera Janiel" class="logo">
         <div class="login-box">
             <h2>Crear cuenta</h2>
-            <form action="#" method="POST">
+            <form action="MenuSesionIniciada.html" method="get">
                 <label for="nombre">Nombre completo</label>
                 <input type="text" id="nombre" name="nombre" required>
 
@@ -45,7 +46,7 @@
                 <label for="confirmPassword">Confirmar contraseña</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" required>
 
-                <button type="submit" href="MenuSesionIniciada.html">Registrarse</button>
+                <button type="submit">Registrarse</button>
             </form>
         </div>
 
