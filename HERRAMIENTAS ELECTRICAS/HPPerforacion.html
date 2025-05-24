@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herramientas de poder</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Herramienta de mano - Herramienta para perforación</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +27,7 @@
         const logo = document.getElementById("logoImagenRefresh");
         if (logo) {
             logo.addEventListener("click", () => {
-                window.location.href = "marcas.html";
+                window.location.href = "../MenuSesionIniciada.html";
             });
         }
     });
@@ -36,29 +36,48 @@
 <body>
     <nav>
         <div class="wrapper">
-            <img src="IMAGENES/logito.png"
+            <img src="../IMAGENES/logito.png"
                 style="position: absolute; width: 100px; height: 100px; left: -2cm; top:-0.2cm" id="logoImagenRefresh">
             <ul class="nav-links">
                 <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
                 <li>
-                    <a href="HDM.html" class="desktop-item">HERRAMIENTAS DE MANO</a>
+                    <a href="/HERRAMIENTASDEMANO/HDM.html" class="desktop-item">HERRAMIENTAS DE MANO</a>
                     <input type="checkbox">
                 </li>
                 <li>
-                    <a href="HPoder.html" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
+                    <a href="/HERRAMIENTAS ELECTRICAS/HPoder.html" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
                     <input type="checkbox" id="showMega">
                 </li>
                 <li>
-                    <a href="Accesorios.html" class="desktop-item">ACCESORIOS</a>
+                    <a href="/ACCESORIOSNAV/Accesorios.html" class="desktop-item">ACCESORIOS</a>
                     <input type="checkbox" id="showMega">
                 </li>
                 <li>
-                    <a href="OtrasHerramientas.html" class="desktop-item">OTROS</a>
+                    <a href="/OTROS/OtrasHerramientas.html" class="desktop-item">OTROS</a>
                     <input type="checkbox" id="showDrop">
                 </li>
             </ul>
         </div>
     </nav>
+    <div class="BtnBuscarCaja">
+        <input type="text" placeholder="Buscar...." class="btnbusqueda">
+        <button class="imgboton">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+            </svg>
+        </button>
+    </div>
+    <div class="profile-user">
+        <button class="logouser">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+            </svg>
+        </button>
+    </div>
     <div class="BtnBuscarCaja">
         <input type="text" placeholder="Buscar...." class="btnbusqueda">
         <button class="imgboton">
@@ -90,27 +109,19 @@
     <div class="contenedor-productos">
 
         <div class="producto">
-            <img src="https://th.bing.com/th/id/OIP.w1jL-whEizSTD5Dv4P7XTwHaFe?rs=1&pid=ImgDetMain" alt="Casilla 1">
-            <h3>Herramientas de corte</h3>
-            <a href="HPCorte.html" class="boton-ver">Ver
+            <img src="https://th.bing.com/th/id/R.0d1675d6b27bff7d9ba3a5f6c7395cdd?rik=quhbtSgNYpb4Hg&pid=ImgRaw&r=0"
+                alt="Casilla 1">
+            <h3>Taladro eléctrico</h3>
+            <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
         <div class="producto">
-            <img src="https://alquileresmajo.com/wp-content/uploads/2021/12/alquilar-herramientas-perforacion.jpg"
+            <img src="https://www.bricoking.es:4000/900/1050/hash/C96F6D9C-3A2C-BCDC-1D6A-64BE0C8B1642.jpg"
                 alt="Casilla 2">
-            <h3>Herramientas de perforación</h3>
-            <a href="HPPerforacion.html" class="boton-ver">Ver
-                <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
-                </span>
-            </a>
-        </div>
-        <div class="producto">
-            <img src="https://img.uline.com/is/image/uline/H-10661?$LargeRHD$" alt="Casilla 3">
-            <h3>Herramientas para sujecion</h3>
+            <h3>Taladro percutor</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
@@ -118,8 +129,8 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://th.bing.com/th/id/OIP.PupUutoOdxtTxJzFzjO8dQHaE7?rs=1&pid=ImgDetMain" alt="Casilla 4">
-            <h3>Herramientas de carpinteria</h3>
+            <img src="https://th.bing.com/th/id/OIP.ZewRZUERbW6b7FeqOZiPcQHaHa?rs=1&pid=ImgDetMain" alt="Casilla 3">
+            <h3>Rotomartillo</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
@@ -127,8 +138,9 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://th.bing.com/th/id/OIP.Iqiq6S64UjfuujnZYEsLZAHaEW?rs=1&pid=ImgDetMain" alt="Casilla 5">
-            <h3>Herramientas multifunción </h3>
+            <img src="https://taladros.mx/wp-content/uploads/2021/08/taladro-inalambrico-craftsman-1024x844.jpg"
+                alt="Casilla 4">
+            <h3>Taladro inalambrico</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
@@ -136,8 +148,9 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_2X_674313-MLA41693946138_052020-F.jpg" alt="Casilla 6">
-            <h3>Herramientas limpieza </h3>
+            <img src="https://th.bing.com/th/id/R.e1d02953d4919383f57cf371e75ff517?rik=aFWe7cj8H6GLmQ&pid=ImgRaw&r=0"
+                alt="Casilla 3">
+            <h3>Sierra de inglete</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
@@ -145,8 +158,9 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://th.bing.com/th/id/OIP.0UPzm6ROtLG9sH3c5wluZQHaHg?rs=1&pid=ImgDetMain" alt="Casilla 7">
-            <h3>Herramientas inalambricas </h3>
+            <img src="https://th.bing.com/th/id/R.9fe071320dde88e5e11e26ecfc1ddc3d?rik=M5mLFh9CNHMvig&pid=ImgRaw&r=0"
+                alt="Casilla 4">
+            <h3>Amoladora angular</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
@@ -154,9 +168,9 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://img.forconstructionpros.com/files/base/acbm/fcp/image/2021/04/U.S.SAWS_JS_160_Propane_Walk_Behind_Saw.608c0e3801f5a.png?auto=format%2Ccompress&fit=max&q=70&rect=131%2C249%2C1002%2C563&w=1200"
-                alt="Casilla 8">
-            <h3>Herramientas de construcción</h3>
+            <img src="https://resources.claroshop.com/medios-plazavip/s2/10178/723640/5b0de8c713b12-644558-mlm26288067558_112017-o-1600x1600.jpg"
+                alt="Casilla 3">
+            <h3>Cortadora de metal</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
@@ -164,36 +178,8 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://th.bing.com/th/id/OIP.3-31QgMY2AlirhrChtGlGgHaEi?rs=1&pid=ImgDetMain" alt="Casilla 9">
-            <h3>Herramientas para pulir</h3>
-            <a href="#" class="boton-ver">Ver
-                <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
-                </span>
-            </a>
-        </div>
-        <div class="producto">
-            <img src="https://soldadoras-siisa.com/wp-content/uploads/2022/02/ARCTRON-205-HF.jpg" alt="Casilla 10">
-            <h3>Herramientas para soldar</h3>
-            <a href="#" class="boton-ver">Ver
-                <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
-                </span>
-            </a>
-        </div>
-        <div class="producto">
-            <img src="https://th.bing.com/th/id/OIP.D78GZiVp1sdJrpmvgeZobgHaDc?rs=1&pid=ImgDetMain" alt="Casilla 11">
-            <h3>Herramientas neumaticas</h3>
-            <a href="#" class="boton-ver">Ver
-                <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
-                </span>
-            </a>
-        </div>
-        <div class="producto">
-            <img src="https://sc04.alicdn.com/kf/H5ec67709c45f489698f220ecb4944860n/224722316/H5ec67709c45f489698f220ecb4944860n.jpg"
-                alt="Casilla 12">
-            <h3>Otras herramientas</h3>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/71Elfz9iwJL._AC_SL1500_.jpg" alt="Casilla 4">
+            <h3>Pulidora</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
@@ -279,7 +265,6 @@
 </footer>
 
 </html>
-
 <script>
     document.getElementById("logoImagenRefresh").addEventListener("click", () => {
         window.location.href = "marcas.html";

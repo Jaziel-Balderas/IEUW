@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otras Herramientas</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Equipo de Seguridad</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
@@ -27,32 +27,33 @@
         const logo = document.getElementById("logoImagenRefresh");
         if (logo) {
             logo.addEventListener("click", () => {
-                window.location.href = "marcas.html";
+                window.location.href = "../MenuSesionIniciada.html";
             });
         }
     });
 </script>
+
 <body>
     <nav>
         <div class="wrapper">
-            <img src="IMAGENES/logito.png"
+            <img src="../IMAGENES/logito.png"
                 style="position: absolute; width: 100px; height: 100px; left: -2cm; top:-0.2cm" id="logoImagenRefresh">
             <ul class="nav-links">
                 <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
                 <li>
-                    <a href="HDM.html" class="desktop-item">HERRAMIENTAS DE MANO</a>
+                    <a href="/HERRAMIENTASDEMANO/HDM.html" class="desktop-item">HERRAMIENTAS DE MANO</a>
                     <input type="checkbox">
                 </li>
                 <li>
-                    <a href="HPoder.html" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
+                    <a href="/HERRAMIENTAS ELECTRICAS/HPoder.html" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
                     <input type="checkbox" id="showMega">
                 </li>
                 <li>
-                    <a href="Accesorios.html" class="desktop-item">ACCESORIOS</a>
+                    <a href="/ACCESORIOSNAV/Accesorios.html" class="desktop-item">ACCESORIOS</a>
                     <input type="checkbox" id="showMega">
                 </li>
                 <li>
-                    <a href="OtrasHerramientas.html" class="desktop-item">OTROS</a>
+                    <a href="/OTROS/OtrasHerramientas.html" class="desktop-item">OTROS</a>
                     <input type="checkbox" id="showDrop">
                 </li>
             </ul>
@@ -87,54 +88,157 @@
         <span class="sliderMBO"></span>
     </label>
     <div class="contenedor-productos">
+        <!-- Productos de equipo de seguridad -->
         <div class="producto">
-            <img src="https://www.monempresarial.com/wp-content/uploads/2019/12/PINTURA.jpg" alt="Casilla 1">
-            <h3>Pinturas y Solventes</h3>
-            <a href="pinturas.html" class="boton-ver">Ver
+            <img src="https://www.vallen.com.mx/on/demandware.static/-/Sites-vallen-master-catalog/default/dwdc756725/images/large/PCAF-873-SFR_500_1.jpg"
+                alt="Casco de seguridad">
+            <h3>Casco de seguridad</h3>
+            <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
         <div class="producto">
-            <img src="https://blog.deacero.com/hs-fs/hubfs/productos%20de%20ferreteria%20iluminacion.jpg?width=755&name=productos%20de%20ferreteria%20iluminacion.jpg" alt="Casilla 2">
-            <h3>Iluminación</h3>
-            <a href="iluminacion.html" class="boton-ver">Ver
+            <img src="https://cdn11.bigcommerce.com/s-qnih6ewukd/images/stencil/500x659/products/569/1045/Guante_de_fibra_de_vidrio_y_supraneema_extra_safe_nitfoam__28308.1700077409.jpg?c=2"
+                alt="Guantes de seguridad">
+            <h3>Guantes industriales</h3>
+            <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
         <div class="producto">
-            <img src="https://www.snr.com.mx/wp-content/uploads/2023/11/63f7bc244715bf4d1e1727fc_Portada-equipo-de-proteccion-personal-seguridad-industrial-min-1024x684.jpg" alt="Casilla 3">
-            <h3>Equipo de Seguridad</h3>
-            <a href="equiposeguridad.html" class="boton-ver">Ver
+            <img src="https://www.anbusafety.com/wp-content/uploads/2023/12/High-Visibility-Reflective-Vest-1.jpg"
+                alt="Chaleco reflectante">
+            <h3>Chaleco reflectante</h3>
+            <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
         <div class="producto">
-            <img src="https://irp.cdn-website.com/43168dd5/dms3rep/multi/fuga.jpg"
-                alt="Casilla 4">
-            <h3>Plomería</h3>
-            <a href="plomeria.html" class="boton-ver">Ver
+            <img src="https://cdn1.coppel.com/images/catalog/mkp/4168/3000/41681058-1.jpg" alt="Máscara antigás">
+            <h3>Máscara antigás</h3>
+            <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
         <div class="producto">
-            <img src="https://www.zetch.mx/cdn/shop/files/02ConexHidraulicas.webp?v=1732078656&width=800"
-                alt="Casilla 5">
-            <h3>Conexiones </h3>
-            <a href="conexiones.html" class="boton-ver">Ver
+            <img src="https://mktmix.com.mx/100-large_default/bota-industrial-de-seguridad-minero.jpg"
+                alt="Botas de seguridad">
+            <h3>Botas con casquillo</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://srseguridad.com/wp-content/uploads/2024/05/GE109CAF-360-A.jpg" alt="Lentes de seguridad">
+            <h3>Lentes de protección</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://grupophiladelphia.com.mx/wp-content/uploads/2020/09/e1-b.jpg" alt="Extintor">
+            <h3>Extintor de polvo químico</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://espomega.mx/media/catalog/product/cache/03508601dbe307d051b966c44bcdbd31/R/E/RESPIRADOR_MEDIA_CARA_DE_SILICON.jpg"
+                alt="Respirador de media cara">
+            <h3>Respirador de media cara</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://www.redlinemedical.mx/cdn/shop/products/botiquin-mochila-mediano-profesional-de-primeros-auxilios-paramedico-962331.jpg?v=1633486217"
+                alt="Botiquín">
+            <h3>Botiquín de primeros auxilios</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://i0.wp.com/officeitems.com.mx/wp-content/uploads/2021/08/100494.jpg?fit=500%2C500&ssl=1"
+                alt="Overol">
+            <h3>Overol de protección</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://protegga.com.mx/wp-content/uploads/2022/07/SENALETICA-DE-ESTIRENO.png"
+                alt="Señal de emergencia">
+            <h3>Señalización de seguridad</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://tonicomsa.com/wp-content/uploads/Protector-facial-covid-transparente.jpg"
+                alt="Careta facial">
+            <h3>Careta facial transparente</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://www.desitec.com.mx/wp-content/uploads/2024/07/arnes-para-cuerpo-completo-USP-160-A.webp"
+                alt="Arnés de seguridad">
+            <h3>Arnés de cuerpo completo</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://safetystoremx.vtexassets.com/arquivos/ids/157358-800-auto?v=637897123506930000&width=800&height=auto&aspect=true"
+                alt="Cinta de advertencia">
+            <h3>Cinta de advertencia</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://libus.mx/media/catalog/product/cache/8c8d34078b36c1ef38bfd913031288cb/l/-/l-300-14.jpg"
+                alt="Protectores auditivos">
+            <h3>Protectores auditivos</h3>
+            <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
     </div>
+
+
     <div class="carbuy">
         <button class="carbuyBttn">
             <svg xmlns="http://www.w3.org/2000/svg"
@@ -211,6 +315,7 @@
         </div>
     </div>
 </footer>
+
 </html>
 
 <script>

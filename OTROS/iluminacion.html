@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herramientas de mano - Herramientas de golpe</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Iluminación</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
@@ -27,56 +27,38 @@
         const logo = document.getElementById("logoImagenRefresh");
         if (logo) {
             logo.addEventListener("click", () => {
-                window.location.href = "marcas.html";
+                window.location.href = "../MenuSesionIniciada.html";
             });
         }
     });
 </script>
+
 <body>
     <nav>
         <div class="wrapper">
-            <img src="IMAGENES/logito.png"
+            <img src="../IMAGENES/logito.png"
                 style="position: absolute; width: 100px; height: 100px; left: -2cm; top:-0.2cm" id="logoImagenRefresh">
             <ul class="nav-links">
                 <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
                 <li>
-                    <a href="HDM.html" class="desktop-item">HERRAMIENTAS DE MANO</a>
+                    <a href="/HERRAMIENTASDEMANO/HDM.html" class="desktop-item">HERRAMIENTAS DE MANO</a>
                     <input type="checkbox">
                 </li>
                 <li>
-                    <a href="HPoder.html" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
+                    <a href="/HERRAMIENTAS ELECTRICAS/HPoder.html" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
                     <input type="checkbox" id="showMega">
                 </li>
                 <li>
-                    <a href="Accesorios.html" class="desktop-item">ACCESORIOS</a>
+                    <a href="/ACCESORIOSNAV/Accesorios.html" class="desktop-item">ACCESORIOS</a>
                     <input type="checkbox" id="showMega">
                 </li>
                 <li>
-                    <a href="OtrasHerramientas.html" class="desktop-item">OTROS</a>
+                    <a href="/OTROS/OtrasHerramientas.html" class="desktop-item">OTROS</a>
                     <input type="checkbox" id="showDrop">
                 </li>
             </ul>
         </div>
     </nav>
-    <div class="BtnBuscarCaja">
-        <input type="text" placeholder="Buscar...." class="btnbusqueda">
-        <button class="imgboton">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                <path
-                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-            </svg>
-        </button>
-    </div>
-    <div class="profile-user">
-        <button class="logouser">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                <path
-                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
-            </svg>
-        </button>
-    </div>
     <div class="BtnBuscarCaja">
         <input type="text" placeholder="Buscar...." class="btnbusqueda">
         <button class="imgboton">
@@ -106,10 +88,10 @@
         <span class="sliderMBO"></span>
     </label>
     <div class="contenedor-productos">
-
+        <!-- Productos de iluminación -->
         <div class="producto">
-            <img src="https://distribuidortruper.mx/wp-content/uploads/2021/03/martillos-truper.jpg" alt="Casilla 1">
-            <h3>Martillos</h3>
+            <img src="https://www.mendoza.com.mx/administracion/files/file_6800.file" alt="LED Interior">
+            <h3>Foco LED Interior</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
@@ -117,8 +99,8 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://m.media-amazon.com/images/I/61LyaYr-VjL._AC_SL1500_.jpg" alt="Casilla 2">
-            <h3>Mazo de madera</h3>
+            <img src="https://cdn.greenice.com/img/p/1/2/8/6/6/2/128662-large_default.jpg" alt="Farola LED">
+            <h3>Farola LED Exterior</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
@@ -126,8 +108,9 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_894245-MLU74339495303_022024-O.webp" alt="Casilla 3">
-            <h3>Martillos perforadores</h3>
+            <img src="https://i0.wp.com/outsidebcn.com/wp-content/uploads/lampara-de-mesa-LED1-de-Tunto-Design.jpg?fit=520%2C520&ssl=1"
+                alt="Lámpara de escritorio">
+            <h3>Lámpara de escritorio</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
@@ -135,17 +118,120 @@
             </a>
         </div>
         <div class="producto">
-            <img src="https://th.bing.com/th/id/R.46fb05b108f0a21c7e5a41875cde97ec?rik=mQisKP9dJ1o3ew&riu=http%3a%2f%2fcarbonestore.cr%2fcdn%2fshop%2fproducts%2f211201_338b4fb2-9a5e-4bc1-a5d3-d40300ae8710.jpg%3fv%3d1680726035&ehk=0VDOCZl%2ff7WmiIqSQSynssanXeYRcbygHNafl40ni1g%3d&risl=&pid=ImgRaw&r=0"
-                alt="Casilla 4">
-            <h3>Martillo demoledor</h3>
+            <img src="https://m.media-amazon.com/images/I/71LTcbbH4YL._AC_UF894,1000_QL80_.jpg" alt="Foco Edison">
+            <h3>Foco estilo Edison</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
                     <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
-
+        <div class="producto">
+            <img src="https://jwjlight.mx/wp-content/uploads/2023/07/JLC-N03522.jpg" alt="Colgante">
+            <h3>Lámpara colgante</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_904209-MLU79325943229_092024-O.webp" alt="Reflector LED">
+            <h3>Reflector LED</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://cdn.homedepot.com.mx/productos/116018/116018.jpg" alt="Serie navideña LED">
+            <h3>Serie LED navideña</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://www.intelec.co.cr/wp-content/uploads/2024/06/VTA84882.jpg" alt="Tira LED">
+            <h3>Tira LED multicolor</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://img001.aivideo8.com/ai_video/U724/2021-04-26/img/1619402628235.jpg?x-oss-process=image/resize,m_lfit,w_768/format,webp/quality,90"
+                alt="Luz de escenario">
+            <h3>Luz para escenario</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://tamex.mx/wp-content/uploads/SOLARLED90W-Lampara-solar-LED-industrial-90W-Supra-1.webp"
+                alt="Lámpara solar">
+            <h3>Lámpara solar</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://edeusto.com/30487-medium_default/pequena-linterna-led-aluminio.jpg" alt="Linterna">
+            <h3>Linterna LED</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://www.radioshack.com.mx/store/medias/515ftw-100128538.jpg?context=bWFzdGVyfHJvb3R8NDYwODV8aW1hZ2UvanBlZ3xhRGM1TDJoaU55ODVNalk0TURFeE56azBORFl5THpVeE5XWjBkMTh4TURBeE1qZzFNemd1YW5CbnxhODc4OWIxNWZmOTQ0YThkOTBhYTlmYTJmN2NmYTBmYjg4MWQyN2YzNzkyMGRmOGFhMDQzZWI5ZTk2YmNjYTYx"
+                alt="Foco RGB">
+            <h3>Foco inteligente RGB</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://cdn1.coppel.com/images/catalog/mkp/8964/3000/89641035-1.jpg?iresize=width:400,height:320"
+                alt="Antorcha solar">
+            <h3>Antorcha solar LED</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://tamex.mx/wp-content/uploads/TL-6011.B-2.jpg" alt="Empotrado LED">
+            <h3>Empotrado de techo LED</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
+        <div class="producto">
+            <img src="https://autopartesjimenez.mx/cdn/shop/products/04071174PLAFONLEDREDONDOEMBUTIBLE4_CONCABLES10LEDSBLANCOLOMBRA-1_1024x.jpg?v=1646156872"
+                alt="Plafón LED">
+            <h3>Plafón LED redondo</h3>
+            <a href="#" class="boton-ver">Ver
+                <span class="animacionMartillo">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                </span>
+            </a>
+        </div>
     </div>
+
     <div class="carbuy">
         <button class="carbuyBttn">
             <svg xmlns="http://www.w3.org/2000/svg"
@@ -224,6 +310,7 @@
 </footer>
 
 </html>
+
 <script>
     document.getElementById("logoImagenRefresh").addEventListener("click", () => {
         window.location.href = "marcas.html";

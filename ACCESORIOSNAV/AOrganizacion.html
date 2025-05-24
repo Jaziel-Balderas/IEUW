@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plomeria</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Accesorios - Organización</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <script>
     window.addEventListener('DOMContentLoaded', () => {
@@ -27,37 +27,57 @@
         const logo = document.getElementById("logoImagenRefresh");
         if (logo) {
             logo.addEventListener("click", () => {
-                window.location.href = "marcas.html";
+                window.location.href = "../MenuSesionIniciada.html";
             });
         }
     });
 </script>
+
 <body>
     <nav>
         <div class="wrapper">
-            <img src="IMAGENES/logito.png"
+            <img src="../IMAGENES/logito.png"
                 style="position: absolute; width: 100px; height: 100px; left: -2cm; top:-0.2cm" id="logoImagenRefresh">
             <ul class="nav-links">
                 <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
                 <li>
-                    <a href="HDM.html" class="desktop-item">HERRAMIENTAS DE MANO</a>
+                    <a href="/HERRAMIENTASDEMANO/HDM.html" class="desktop-item">HERRAMIENTAS DE MANO</a>
                     <input type="checkbox">
                 </li>
                 <li>
-                    <a href="HPoder.html" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
+                    <a href="/HERRAMIENTAS ELECTRICAS/HPoder.html" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
                     <input type="checkbox" id="showMega">
                 </li>
                 <li>
-                    <a href="Accesorios.html" class="desktop-item">ACCESORIOS</a>
+                    <a href="/ACCESORIOSNAV/Accesorios.html" class="desktop-item">ACCESORIOS</a>
                     <input type="checkbox" id="showMega">
                 </li>
                 <li>
-                    <a href="OtrasHerramientas.html" class="desktop-item">OTROS</a>
+                    <a href="/OTROS/OtrasHerramientas.html" class="desktop-item">OTROS</a>
                     <input type="checkbox" id="showDrop">
                 </li>
             </ul>
         </div>
     </nav>
+    <div class="BtnBuscarCaja">
+        <input type="text" placeholder="Buscar...." class="btnbusqueda">
+        <button class="imgboton">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+            </svg>
+        </button>
+    </div>
+    <div class="profile-user">
+        <button class="logouser">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+            </svg>
+        </button>
+    </div>
     <div class="BtnBuscarCaja">
         <input type="text" placeholder="Buscar...." class="btnbusqueda">
         <button class="imgboton">
@@ -86,117 +106,141 @@
         <input type="checkbox" id="inputMOB">
         <span class="sliderMBO"></span>
     </label>
-    <!-- Continúa el head y cuerpo tal como ya lo tienes, luego cambia la sección de productos por esta: -->
-
     <div class="contenedor-productos">
         <div class="producto">
-            <img src="https://cdn.homedepot.com.mx/productos/164186/164186-d.jpg" alt="Casilla 1">
-            <h3>Nivel láser</h3>
+            <img src="https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/3b00e142e06de80381df821995295dfe.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp"
+                alt="Organizador de herramientas colgante">
+            <h3>Organizador de herramientas colgante</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f6e0.png">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
+
         <div class="producto">
-            <img src="https://www.toolferreterias.com/cdn/shop/files/cinta-teflon-12-x-520-cinta-12-x-520-tool-ferreterias-ferretodo-922066.jpg?v=1731391969" alt="Casilla 2">
-            <h3>Teflón para roscas</h3>
+            <img src="https://www.sinsa.com.ni/ccstore/v1/images/?source=/file/v2688387904240966400/products/131643612_131643612.2.jpg&height=475&width=475"
+                alt="Caja organizadora con divisiones">
+            <h3>Caja organizadora con divisiones</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f6e0.png">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
+
         <div class="producto">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_792172-MLM79602558932_102024-O.webp" alt="Casilla 3">
-            <h3>Empaque</h3>
+            <img src="https://i5.walmartimages.com/asr/af64c377-a18f-4391-a2a1-81cb50155589.45ac2ef9e7d0e4001187ef05221a11d4.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                alt="Panel perforado metálico">
+            <h3>Panel perforado metálico</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f6e0.png">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
+
         <div class="producto">
-            <img src="https://orion91.com/98643-home_default/desatascador-de-tuberias-en-espiral-3m-gris-rojo-7house.jpg" alt="Casilla 4">
-            <h3>Desatascador</h3>
+            <img src="https://cdn1.coppel.com/images/catalog/mkp/5666/3000/56661254-1.jpg"
+                alt="Organizador apilable de piezas">
+            <h3>Organizador apilable de piezas</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f6e0.png">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
+
         <div class="producto">
-            <img src="https://i5.walmartimages.com/asr/4094afad-7741-4e56-b8f3-e2956d39dc5f.8fc54888c2fb13be94852245ccc222be.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF" alt="Casilla 5">
-            <h3>Manguera de ducha</h3>
+            <img src="https://click.fixferreterias.com/media/product/28d/estante-metalico-8-repisas-capacidad-80-kg-180x30x85-truper-314.jpg"
+                alt="Estante metálico para taller">
+            <h3>Estante metálico para taller</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f6e0.png">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
+
         <div class="producto">
-            <img src="https://tauber.com.mx/storage/customer/images/83801_U1_350.jpg" alt="Casilla 6">
-            <h3>Cortatubos</h3>
+            <img src="https://images.kkeu.de/is/image/BEG/Dispositivos_de_transporte_y_carros/Carros_de_herramientas/Carro_de_taller_JUMBO_pdplarge-mrd--000023483257_PRD_org_all.jpg"
+                alt="Carro de herramientas rodante">
+            <h3>Carro de herramientas rodante</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f6e0.png">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
+
         <div class="producto">
-            <img src="https://cdn.homedepot.com.mx/productos/175319/175319-d.jpg" alt="Casilla 7">
-            <h3>Grifo monomando</h3>
+            <img src="https://http2.mlstatic.com/D_949919-CBT83512952606_042025-C.jpg"
+                alt="Caja organizadora de tornillos">
+            <h3>Caja organizadora de tornillos</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f6e0.png">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
+
         <div class="producto">
-            <img src="https://ferrefama.com/cdn/shop/products/2777.jpg?v=1746743102" alt="Casilla 8">
-            <h3>Sapo para inodoro</h3>
+            <img src="https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00007314917918L.jpg"
+                alt="Cajonera plástica con compartimentos">
+            <h3>Cajonera plástica con compartimentos</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f6e0.png">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
+
         <div class="producto">
-            <img src="https://www.gricol.com/cdn/shop/files/01-2907-215S.jpg?v=1736960945" alt="Casilla 9">
-            <h3>Sifón flexible</h3>
+            <img src="https://elements-resized.envatousercontent.com/elements-cover-images/a35d0ff8-2f1f-4482-9d44-a614def7d454?w=433&cf_fit=scale-down&q=85&format=auto&s=acb2a80d4333d82733e2d4c6df052542ef48b1bcf584858ee9e05a1c90e14f17"
+                alt="Estación de trabajo con estantes">
+            <h3>Estación de trabajo con estantes</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f6e0.png">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
+
         <div class="producto">
-            <img src="https://www.byp.com.mx/cdn/shop/products/SBL28_SELLADOR_SILICON_BLANCO_280mL.jpg?v=1572989000" alt="Casilla 10">
-            <h3>Sellador de silicona</h3>
+            <img src="https://i5.walmartimages.com/asr/2638efbd-b130-48f7-8744-257e97629166.093736cdf9573367b5d2ed3e584c07b9.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                alt="Contenedor de almacenamiento de plástico">
+            <h3>Contenedor de almacenamiento de plástico</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f6e0.png">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
+
         <div class="producto">
-            <img src="https://www.dwmx.mx/image/cache/catalog/Stanley/30-626-2-550x550..jpg" alt="Casilla 11">
-            <h3>Cinta Métrica</h3>
+            <img src="https://www.officedepot.com.mx/medias/100120384.jpg-1200ftw?context=bWFzdGVyfHJvb3R8OTk5NzZ8aW1hZ2UvanBlZ3xhR05pTDJoaE1TOHhNVFUwTURVMk5qazJOak13TWk4eE1EQXhNakF6T0RRdWFuQm5YekV5TURCbWRIY3xmY2Q2YTU5NjM0ZGE1MDVmYTk1MjllYjA3OWRlZjAxZmE1MjQ2NjEyNzRmY2UzM2M2OWUxMjUxYjNmYmE0MTM0"
+                alt="Estante de pared para herramientas">
+            <h3>Estante de pared para herramientas</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f6e0.png">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
+
         <div class="producto">
-            <img src="https://cdn.homedepot.com.mx/productos/127955/127955-a3.jpg" alt="Casilla 12">
-            <h3>Trampa para fregadero</h3>
+            <img src="https://i.ebayimg.com/images/g/MJMAAOSwqM5dp0ZH/s-l1200.jpg"
+                alt="Rack colgante para herramientas">
+            <h3>Rack colgante para herramientas</h3>
             <a href="#" class="boton-ver">Ver
                 <span class="animacionMartillo">
-                    <img src="https://images.emojiterra.com/google/android-10/512px/1f6e0.png">
+                    <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
                 </span>
             </a>
         </div>
+
+
+
     </div>
 
     <div class="carbuy">
@@ -275,8 +319,8 @@
         </div>
     </div>
 </footer>
-</html>
 
+</html>
 <script>
     document.getElementById("logoImagenRefresh").addEventListener("click", () => {
         window.location.href = "marcas.html";
