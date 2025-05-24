@@ -40,35 +40,9 @@
                 style="position: absolute; width: 100px; height: 100px; left: -2cm; top:-0.2cm" id="logoImagenRefresh">
             <ul class="nav-links">
                 <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-                <li>
-                    <a href="HDM.html" class="desktop-item">HERRAMIENTAS DE MANO</a>
-                    <input type="checkbox">
-                </li>
-                <li>
-                    <a href="HPoder.html" class="desktop-item">HERRAMIENTAS ELECTRICAS</a>
-                    <input type="checkbox" id="showMega">
-                </li>
-                <li>
-                    <a href="Accesorios.html" class="desktop-item">ACCESORIOS</a>
-                    <input type="checkbox" id="showMega">
-                </li>
-                <li>
-                    <a href="OtrasHerramientas.html" class="desktop-item">OTROS</a>
-                    <input type="checkbox" id="showDrop">
-                </li>
             </ul>
         </div>
     </nav>
-    <div class="BtnBuscarCaja">
-        <input type="text" placeholder="Buscar...." class="btnbusqueda">
-        <button class="imgboton">
-            <svg xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                <path
-                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-            </svg>
-        </button>
-    </div>
     <label class="NuevoUsuario">
         <a href="CrearCuenta.html"> ¿Eres nuevo?</a>
     </label>
@@ -77,17 +51,132 @@
         <span class="sliderMBO"></span>
     </label>
     <section class="seccion-marcas">
+        <h1 style="
+            font-size: 3em;
+            font-weight: bold;
+            padding: 10px;
+            color: black;
+            text-align: center;
+            ">
+            BIENVENIDO A FERRETERIA JANIEL
+        </h1>
         <div class="contenedor-marcas">
-            <img src="MARCAS.png" alt="Marcas de la empresa" style="margin-bottom: 40px;">
 
-            <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
-                <div style="flex: 1 1 350px; max-width: 350px;">
+            <img src="MARCAS.png" alt="Marcas de la empresa" style="margin-bottom: 40px;">
+            
+            <div style="text-align: center; margin: 60px 0 20px;">
+                <h1 style="font-size: 2em; font-weight: bold; margin-bottom: -20px;">
+                    LOS PRODUCTOS DE LA MEJOR CALIDAD
+                </h1>
+                <button onclick="document.getElementById('modal').style.display='block'"
+                    style="margin-top: 40px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; font-size: 1em; cursor: pointer;">
+                    Explorar más
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div id="modal"
+                style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); z-index: 1000;">
+                <div
+                    style="background: white; padding: 30px; width: 80%; max-width: 400px; margin: 100px auto; border-radius: 10px; text-align: center;">
+                    <h2>¡Ups! 😅</h2>
+                    <p>Debes registrarte o iniciar sesión para explorar más productos.</p>
+
+                    <!-- Botones -->
+                    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+                        <button onclick="document.getElementById('modal').style.display='none'"
+                            style="padding: 10px 20px; background-color: #dc3545; color: white; border: none; border-radius: 5px; font-size: 1em;">
+                            Cerrar
+                        </button>
+
+                        <a href="login.html" style="text-decoration: none;">
+                            <button
+                                style="padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 5px; font-size: 1em;">
+                                Iniciar sesión
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="width: 100%; height: 4px; background-color: #333; margin-bottom: -80px;"></div>
+
+            <div class="contenedor-productos">
+                <div class="producto">
+                    <img src="https://www.diheresa.com/17607-large_default/juego-de-desarmadores-de-impacto-7-piezas-pretul-truper.jpg"
+                        alt="Casilla 1">
+                    <h3>Herramientas de mano</h3>
+
+                    <span class="animacionMartillo">
+                        <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                    </span>
+                </div>
+                <div class="producto">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_633420-MLA45467093493_042021-F.jpg" alt="Casilla 2">
+                    <h3>Herramientas de poder</h3>
+                    <span class="animacionMartillo">
+                        <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                    </span>
+                </div>
+                <div class="producto">
+                    <img src="https://media.simiranda.com/category/insertos-reparacion-roscas-helicoils-1024x1024.jpg"
+                        alt="Casilla 1">
+                    <h3>Accesorios</h3>
+
+                    <span class="animacionMartillo">
+                        <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                    </span>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 150px 0 20px;">
+                <h1 style="font-size: 2em; font-weight: bold; margin-bottom: -20px;">
+                    PARA TODO TIPO DE TRABAJOS
+                </h1>
+                <button onclick="document.getElementById('modal').style.display='block'"
+                    style="margin-top: 40px; padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; font-size: 1em; cursor: pointer;">
+                    Explorar más
+                </button>
+                
+            </div>
+            
+            <div style="width: 100%; height: 4px; background-color: #333; margin-bottom: -80px;"></div>
+            <div class="contenedor-productos">
+                <div class="producto">
+                    <img src="https://cursossenasofiaplus.com/wp-content/uploads/carpinteria-1.jpg" alt="Casilla 1">
+                    <h3>Carpinteria</h3>
+
+                    <span class="animacionMartillo">
+                        <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                    </span>
+                </div>
+                <div class="producto">
+                    <img src="https://alonsocms.com/wp-content/uploads/2021/01/plomeria.jpg" alt="Casilla 2">
+                    <h3>Herramientas de poder</h3>
+                    <span class="animacionMartillo">
+                        <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                    </span>
+                </div>
+                <div class="producto">
+                    <img src="https://th.bing.com/th/id/OIP.IBL7quvYmvgek__ZxVdFUQHaHa?w=600&h=600&rs=1&pid=ImgDetMain"
+                        alt="Casilla 1">
+                    <h3>Accesorios</h3>
+
+                    <span class="animacionMartillo">
+                        <img src="https://images.emojiterra.com/google/android-10/512px/1f528.png">
+                    </span>
+                </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; margin-top: 200px;">
+                <div style="flex: 1 1 350px; max-width: 350px; margin-bottom: 10px;">
                     <img src="banner_urrea.jpg" alt="Makita">
                 </div>
-                <div style="flex: 1 1 350px; max-width: 350px;">
+
+                <div style="flex: 1 1 350px; max-width: 350px; margin-bottom: 10px;">
                     <img src="banner_surtek1.jpg" alt="Urrea">
                 </div>
-                <div style="flex: 1 1 350px; max-width: 350px;">
+                <div style="flex: 1 1 350px; max-width: 350px; margin-bottom: 10px;">
                     <img src="banner_makita.jpg" alt="Surtek">
                 </div>
             </div>
