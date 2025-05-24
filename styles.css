@@ -153,18 +153,18 @@ nav input {
 
 .contenedor-productos {
     position: relative;
-    top: 100px;
+    top: 150px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 60px;
-    padding: 20px;
+    padding: 50px;
 }
 
 .producto {
     width: 300px;
     background: #06283D;
-    padding: 15px;
+    padding: 25px;
     border-radius: 30px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
