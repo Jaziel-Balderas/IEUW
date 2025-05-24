@@ -1014,7 +1014,7 @@ input:checked+.sliderMBO::before {
 }
 
 .modal-producto img {
-    width: 480px;
+    width: 280px;
     height: auto;
     border-radius: 8px;
 }
